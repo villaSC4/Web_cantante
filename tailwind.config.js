@@ -8,8 +8,9 @@ export default {
     extend: {
       colors: {
         brand: {
-          red: "#ff0033",
-          crimson: "#d90429",
+          cyan: "#00f0ff",
+          electric: "#00b4d8",
+          blue: "#00f0ff",
           dark: "#050506",
           card: "#0f0f13",
         }

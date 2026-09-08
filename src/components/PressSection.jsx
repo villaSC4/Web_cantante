@@ -11,14 +11,14 @@ export default function PressSection() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 space-y-2">
           <div className="inline-flex items-center gap-2 mb-1">
-            <span className="w-6 h-[2px] bg-[#ff0033]"></span>
-            <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#ff0033]">
+            <span className="w-6 h-[2px] bg-[#00f0ff]"></span>
+            <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#00f0ff]">
               RECONOCIMIENTO & IMPACTO
             </span>
-            <span className="w-6 h-[2px] bg-[#ff0033]"></span>
+            <span className="w-6 h-[2px] bg-[#00f0ff]"></span>
           </div>
           <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl text-white tracking-wide">
-            MEDIOS DIGITALES & <span className="text-[#ff0033]">PRENSA</span>
+            MEDIOS DIGITALES & <span className="text-[#00f0ff]">PRENSA</span>
           </h2>
           <p className="text-zinc-400 text-xs sm:text-sm font-light">
             Lo que dicen las plataformas especializadas y la comunidad del hip hop sobre el fenómeno COREBACK.
@@ -30,14 +30,14 @@ export default function PressSection() {
           {artistData.pressQuotes.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-red-500/50 transition-all duration-300 relative flex flex-col justify-between group hover:-translate-y-1"
+              className="p-6 rounded-2xl bg-zinc-900/50 border border-zinc-800/80 hover:border-cyan-500/50 transition-all duration-300 relative flex flex-col justify-between group hover:-translate-y-1"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-tech font-bold uppercase tracking-wider text-[#ff0033] bg-red-950/40 border border-red-800/30 px-2.5 py-1 rounded-full">
+                  <span className="text-[10px] font-tech font-bold uppercase tracking-wider text-[#00f0ff] bg-cyan-950/40 border border-cyan-800/30 px-2.5 py-1 rounded-full">
                     {item.tag}
                   </span>
-                  <Quote size={20} className="text-zinc-600 group-hover:text-red-500 transition-colors" />
+                  <Quote size={20} className="text-zinc-600 group-hover:text-cyan-400 transition-colors" />
                 </div>
 
                 <p className="text-sm text-zinc-300 font-light italic leading-relaxed">
@@ -49,14 +49,14 @@ export default function PressSection() {
                 <span className="font-heading text-lg text-white tracking-wide">
                   {item.source}
                 </span>
-                <span className="text-xs text-red-400 font-tech">★★★★★</span>
+                <span className="text-xs text-cyan-400 font-tech">★★★★★</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Instagram Feature Showcase Card */}
-        <div className="rounded-3xl bg-gradient-to-r from-purple-950/30 via-zinc-900/80 to-red-950/30 border border-pink-500/30 p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="rounded-3xl bg-gradient-to-r from-purple-950/30 via-zinc-900/80 to-cyan-950/30 border border-pink-500/30 p-8 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-8 space-y-3">
@@ -79,7 +79,7 @@ export default function PressSection() {
                 href={artistData.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-red-600 text-white font-tech text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-pink-600/30 text-center"
+                className="px-6 py-3.5 rounded-full bg-gradient-to-r from-pink-600 to-cyan-600 text-white font-tech text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:scale-105 transition-transform shadow-lg shadow-pink-600/30 text-center"
               >
                 <InstagramIcon size={16} />
                 <span>SEGUIR EN INSTAGRAM</span>

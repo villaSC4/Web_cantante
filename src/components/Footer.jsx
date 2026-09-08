@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-[#030304] border-t border-zinc-900 pt-16 pb-28 sm:pb-24 relative overflow-hidden">
       
       {/* Laser line on top */}
-      <div className="absolute top-0 left-0 right-0 red-laser-line"></div>
+      <div className="absolute top-0 left-0 right-0 neon-laser-line"></div>
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-zinc-900">
@@ -20,9 +20,9 @@ export default function Footer() {
           {/* Col 1: Brand Info (5 cols) */}
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#ff0033]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00f0ff]"></span>
               <span className="font-heading text-3xl sm:text-4xl tracking-wider text-white">
-                CORE<span className="text-[#ff0033]">BACK</span>
+                CORE<span className="text-[#00f0ff]">BACK</span>
               </span>
             </div>
             <p className="text-zinc-400 text-xs sm:text-sm font-light max-w-sm leading-relaxed">
@@ -51,7 +51,7 @@ export default function Footer() {
                 href={artistData.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-red-500 hover:border-red-500 transition-all hover:scale-105"
+                className="w-10 h-10 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-[#00f0ff] hover:border-cyan-500 transition-all hover:scale-105"
                 title="YouTube"
               >
                 <YoutubeIcon size={18} />
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Col 2: Navigation Links (3 cols) */}
           <div className="md:col-span-3 space-y-3">
-            <h5 className="font-tech text-xs font-bold uppercase tracking-widest text-[#ff0033]">
+            <h5 className="font-tech text-xs font-bold uppercase tracking-widest text-[#00f0ff]">
               EXPLORAR
             </h5>
             <ul className="space-y-2 text-xs font-tech text-zinc-400">
@@ -72,7 +72,7 @@ export default function Footer() {
                 <a href="#about" className="hover:text-white transition-colors">TRAYECTORIA (4 AÑOS)</a>
               </li>
               <li>
-                <a href="#redbull" className="hover:text-white transition-colors">REDBULL BATALLA</a>
+                <a href="#batallas" className="hover:text-white transition-colors">BATALLAS & FREESTYLE</a>
               </li>
               <li>
                 <a href="#discography" className="hover:text-white transition-colors">DISCOGRAFÍA & DUETOS</a>
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Col 3: Legal & Booking info (4 cols) */}
           <div className="md:col-span-4 space-y-3">
-            <h5 className="font-tech text-xs font-bold uppercase tracking-widest text-[#ff0033]">
+            <h5 className="font-tech text-xs font-bold uppercase tracking-widest text-[#00f0ff]">
               CONTRATACIONES DIRECTAS
             </h5>
             <p className="text-xs text-zinc-400 font-light leading-relaxed">
@@ -119,7 +119,7 @@ export default function Footer() {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-zinc-400 hover:text-[#ff0033] transition-colors"
+            className="flex items-center gap-2 text-zinc-400 hover:text-[#00f0ff] transition-colors"
           >
             <span>VOLVER ARRIBA</span>
             <ArrowUp size={14} />

@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MarqueeBanner from './components/MarqueeBanner';
 import About from './components/About';
-import RedBullSection from './components/RedBullSection';
+import BatallasSection from './components/BatallasSection';
 import Discography from './components/Discography';
 import Gallery from './components/Gallery';
 import PressSection from './components/PressSection';
@@ -75,7 +75,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#040405] text-white flex flex-col selection:bg-[#ff0033] selection:text-white">
+    <div className="min-h-screen bg-[#040405] text-white flex flex-col selection:bg-[#00f0ff] selection:text-black">
       {/* Top Navbar */}
       <Navbar
         isPlaying={isPlaying}
@@ -96,7 +96,7 @@ export default function App() {
 
         <About />
 
-        <RedBullSection />
+        <BatallasSection />
 
         <Discography
           currentTrack={currentTrack}

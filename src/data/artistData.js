@@ -8,11 +8,11 @@ export const artistData = {
   youtubeUrl: "https://www.youtube.com/@COREBACKK/featured",
   spotifyUrl: "https://open.spotify.com",
   tagline: "LÍRICA CRUDA • FLOW INQUEBRANTABLE • FREESTYLE DE ALTO CALIBRE",
-  bioShort: "4 años dominando las tarimas, conquistando el circuito de Red Bull Batalla y redefiniendo el sonido del rap con temas icónicos como 'Achorao', 'Purgatori', 'Raperas de Caza' y 'Flashes'.",
+  bioShort: "4 años dominando las tarimas, conquistando las batallas de freestyle de élite y redefiniendo el sonido del rap con temas icónicos como 'Achorao', 'Purgatori', 'Raperas de Caza' y 'Flashes'.",
   bioLong: [
     "Con más de 4 años de trayectoria implacable en el underground y los escenarios más prestigiosos de habla hispana, COREBACK (CORE) se ha consolidado como una de las voces más potentes y versátiles del rap contemporáneo.",
     "Inspirada en el mito clásico de Core / Perséfone y la dualidad de la luz y la oscuridad, su sonido transita con maestría entre el drill pesado, el boom bap crudo y las métricas afiladas.",
-    "Su consagración en la Batalla de Gallos de Red Bull y sus aclamadas producciones de estudio —como 'Achorao', 'Purgatori', 'Dejad k Oren' y colaboraciones legendarias como 'Raperas de Caza'— han consolidado una comunidad fiel que sigue cada uno de sus lanzamientos y duetos."
+    "Su consagración en los torneos y batallas de freestyle de mayor nivel y sus aclamadas producciones de estudio —como 'Achorao', 'Purgatori', 'Dejad k Oren' y colaboraciones legendarias como 'Raperas de Caza'— han consolidado una comunidad fiel que sigue cada uno de sus lanzamientos y duetos."
   ],
   stats: [
     { label: "Años de Trayectoria", value: "4+", detail: "En la cima del rap" },
@@ -22,14 +22,14 @@ export const artistData = {
   ],
   heroBadges: [
     "CANAL YOUTUBE @COREBACKK",
-    "REDBULL BATALLA WINNER",
+    "CAMPEONA DE FREESTYLE",
     "ÁLBUM DELIRIUM",
     "4 AÑOS EN EL CIRCUITO"
   ],
-  redBullMilestones: [
+  battleMilestones: [
     {
       year: "2024",
-      title: "Campeona Regional Red Bull Batalla",
+      title: "Campeona Regional de Batallas Freestyle",
       location: "Arena Central",
       description: "Clasificación histórica dominando las 4 rondas con rimas directas, respuestas al momento y un punchline demoledor.",
       highlight: "Minuto de oro invicto"
@@ -179,7 +179,7 @@ export const artistData = {
       id: 3,
       src: "/assets/IMG_8335.jpg",
       category: "En Vivo",
-      title: "Achorao Live & Red Bull",
+      title: "Achorao Live & Batallas",
       description: "Concentración máxima en medio de la ronda decisiva de batalla."
     },
     {
@@ -277,7 +277,7 @@ export const artistData = {
       id: 17,
       src: "/assets/IMG_3712.jpg",
       category: "Sesiones",
-      title: "Crimson Mood",
+      title: "Neon Cyan Mood",
       description: "Juego de sombras y siluetas en el rodaje nocturno."
     },
     {
@@ -302,7 +302,7 @@ export const artistData = {
       tag: "CRÍTICA MUSICAL"
     },
     {
-      quote: "Su paso por Red Bull Batalla y colaboraciones como 'Raperas de Caza' consagran a una referente indispensable del freestyle.",
+      quote: "Su paso por las principales tarimas de batalla y colaboraciones como 'Raperas de Caza' consagran a una referente indispensable del freestyle.",
       source: "Freestyle Media Global",
       tag: "COBERTURA DIGITAL"
     },

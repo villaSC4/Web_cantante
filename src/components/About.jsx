@@ -6,23 +6,23 @@ export default function About() {
   return (
     <section id="about" className="py-24 relative overflow-hidden bg-[#07070a]">
       {/* Background accents */}
-      <div className="absolute top-1/2 -left-48 w-96 h-96 bg-red-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute top-1/2 -left-48 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none"></div>
       
       <div className="container-custom relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-start mb-16">
           <div className="flex items-center gap-2 mb-2">
-            <span className="w-8 h-[2px] bg-[#ff0033]"></span>
-            <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#ff0033]">
+            <span className="w-8 h-[2px] bg-[#00f0ff]"></span>
+            <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#00f0ff]">
               IDENTIDAD & TRAYECTORIA
             </span>
           </div>
           <h2 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide">
-            4 AÑOS FORJANDO EL <span className="text-[#ff0033]">LEGADO</span>
+            4 AÑOS FORJANDO EL <span className="text-[#00f0ff]">LEGADO</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-2xl mt-2 font-light">
-            Desde los cyphers callejeros hasta el máximo trono de Red Bull Batalla, una carrera construida sobre disciplina, líricas certeras y potencia pura.
+            Desde los cyphers callejeros hasta los escenarios más imponentes de batallas de freestyle, una carrera construida sobre disciplina, líricas certeras y potencia pura.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function About() {
               
               {/* Primary Image: Dark Hoodie / Street Portrait */}
               <div className="col-span-8 relative">
-                <div className="relative rounded-2xl overflow-hidden border border-red-500/30 shadow-2xl group">
+                <div className="relative rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl group">
                   <img
                     src="/assets/IMG_3706.png"
                     alt="COREBACK Portrait"
@@ -45,7 +45,7 @@ export default function About() {
                   
                   {/* Floating Badge */}
                   <div className="absolute bottom-4 left-4 right-4 p-3 bg-black/80 backdrop-blur-md rounded-xl border border-white/10">
-                    <span className="text-[10px] font-tech text-[#ff0033] font-bold uppercase tracking-wider block">
+                    <span className="text-[10px] font-tech text-[#00f0ff] font-bold uppercase tracking-wider block">
                       ESTILO & ACTITUD
                     </span>
                     <p className="text-xs text-zinc-200 font-medium">
@@ -63,12 +63,12 @@ export default function About() {
                     alt="COREBACK Camcorder"
                     className="w-full aspect-[3/4] object-cover filter brightness-90 group-hover:scale-110 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-red-950/20 mix-blend-color"></div>
+                  <div className="absolute inset-0 bg-cyan-950/20 mix-blend-color"></div>
                 </div>
 
                 {/* Mini Stat Card */}
-                <div className="bg-black/90 p-4 rounded-xl border border-red-500/40 text-center shadow-lg">
-                  <div className="font-heading text-3xl text-[#ff0033] leading-none">4+</div>
+                <div className="bg-black/90 p-4 rounded-xl border border-cyan-500/40 text-center shadow-lg">
+                  <div className="font-heading text-3xl text-[#00f0ff] leading-none">4+</div>
                   <div className="text-[9px] font-tech text-zinc-300 uppercase tracking-widest mt-1">
                     AÑOS DE FLOW
                   </div>
@@ -96,20 +96,20 @@ export default function About() {
             {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               
-              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-red-500/40 transition-colors group">
-                <div className="w-10 h-10 rounded-lg bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#ff0033] mb-3 group-hover:scale-110 transition-transform">
+              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-colors group">
+                <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-[#00f0ff] mb-3 group-hover:scale-110 transition-transform">
                   <Award size={20} />
                 </div>
                 <h4 className="font-tech text-sm font-bold text-white uppercase tracking-wider mb-1">
-                  Red Bull Batalla
+                  Batallas & Freestyle
                 </h4>
                 <p className="text-xs text-zinc-400">
-                  Consagración en el torneo más exigente de freestyle hispanohablante con respuestas al momento y punchlines demoledores.
+                  Consagración en el circuito más exigente de freestyle hispanohablante con respuestas al momento y punchlines demoledores.
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-red-500/40 transition-colors group">
-                <div className="w-10 h-10 rounded-lg bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#ff0033] mb-3 group-hover:scale-110 transition-transform">
+              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-colors group">
+                <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-[#00f0ff] mb-3 group-hover:scale-110 transition-transform">
                   <Mic size={20} />
                 </div>
                 <h4 className="font-tech text-sm font-bold text-white uppercase tracking-wider mb-1">
@@ -120,8 +120,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-red-500/40 transition-colors group">
-                <div className="w-10 h-10 rounded-lg bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#ff0033] mb-3 group-hover:scale-110 transition-transform">
+              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-colors group">
+                <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-[#00f0ff] mb-3 group-hover:scale-110 transition-transform">
                   <Flame size={20} />
                 </div>
                 <h4 className="font-tech text-sm font-bold text-white uppercase tracking-wider mb-1">
@@ -132,8 +132,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-red-500/40 transition-colors group">
-                <div className="w-10 h-10 rounded-lg bg-red-950/60 border border-red-800/40 flex items-center justify-center text-[#ff0033] mb-3 group-hover:scale-110 transition-transform">
+              <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 hover:border-cyan-500/40 transition-colors group">
+                <div className="w-10 h-10 rounded-lg bg-cyan-950/60 border border-cyan-800/40 flex items-center justify-center text-[#00f0ff] mb-3 group-hover:scale-110 transition-transform">
                   <Zap size={20} />
                 </div>
                 <h4 className="font-tech text-sm font-bold text-white uppercase tracking-wider mb-1">
@@ -152,7 +152,7 @@ export default function About() {
                 href={artistData.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-tech font-bold uppercase tracking-widest text-[#ff0033] hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-tech font-bold uppercase tracking-widest text-[#00f0ff] hover:text-white transition-colors"
               >
                 <span>SEGUIR EL DÍA A DÍA EN @COREBACKK</span>
                 <ChevronRight size={16} />

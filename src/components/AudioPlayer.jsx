@@ -48,11 +48,11 @@ export default function AudioPlayer({
       for (let i = 0; i < freqData.length; i++) {
         const barHeight = (freqData[i] / 255) * canvas.height;
 
-        // Gradient red
+        // Gradient neon cyan
         const gradient = ctx.createLinearGradient(0, canvas.height, 0, 0);
-        gradient.addColorStop(0, '#8b0000');
-        gradient.addColorStop(0.5, '#d90429');
-        gradient.addColorStop(1, '#ff0033');
+        gradient.addColorStop(0, '#002b5c');
+        gradient.addColorStop(0.5, '#00b4d8');
+        gradient.addColorStop(1, '#00f0ff');
 
         ctx.fillStyle = gradient;
         ctx.fillRect(x, canvas.height - barHeight, barWidth - 1, barHeight);
@@ -108,8 +108,8 @@ export default function AudioPlayer({
         isMinimized ? 'translate-y-[calc(100%-2.5rem)]' : 'translate-y-0'
       }`}
     >
-      {/* Top Red Laser Line */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#ff0033] to-transparent shadow-[0_0_10px_rgba(255,0,51,0.8)]"></div>
+      {/* Top Neon Laser Line */}
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#00f0ff] to-transparent shadow-[0_0_10px_rgba(0,240,255,0.8)]"></div>
 
       {/* Main Container */}
       <div className="bg-[#09090c]/95 backdrop-blur-xl border-t border-white/10 px-4 sm:px-6 py-2.5 shadow-2xl">
@@ -121,7 +121,7 @@ export default function AudioPlayer({
           title="Saltar a este punto"
         >
           <div
-            className="h-full bg-gradient-to-r from-red-600 via-[#ff0033] to-red-400 rounded-full transition-all duration-100 relative"
+            className="h-full bg-gradient-to-r from-blue-600 via-[#00f0ff] to-cyan-300 rounded-full transition-all duration-100 relative"
             style={{ width: `${progressPercent}%` }}
           >
             <span className="w-2.5 h-2.5 bg-white rounded-full absolute right-0 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 shadow-md"></span>
@@ -132,26 +132,26 @@ export default function AudioPlayer({
           
           {/* Left: Track Info & Cover */}
           <div className="flex items-center gap-3 min-w-0 flex-1 sm:flex-initial">
-            <div className="relative w-11 h-11 rounded-lg overflow-hidden bg-black border border-red-500/40 flex-shrink-0">
+            <div className="relative w-11 h-11 rounded-lg overflow-hidden bg-black border border-cyan-500/40 flex-shrink-0">
               <img
                 src={currentTrack?.cover || "/assets/IMG_3694.png"}
                 alt={currentTrack?.title}
                 className="w-full h-full object-cover"
               />
               {isPlaying && (
-                <div className="absolute inset-0 bg-red-950/50 backdrop-blur-[1px] flex items-center justify-center">
-                  <span className="w-2 h-2 rounded-full bg-[#ff0033] animate-ping"></span>
+                <div className="absolute inset-0 bg-cyan-950/50 backdrop-blur-[1px] flex items-center justify-center">
+                  <span className="w-2 h-2 rounded-full bg-[#00f0ff] animate-ping"></span>
                 </div>
               )}
             </div>
 
             <div className="min-w-0">
               <div className="flex items-center gap-1.5">
-                <span className="text-[9px] font-tech text-[#ff0033] font-bold uppercase tracking-wider">
+                <span className="text-[9px] font-tech text-[#00f0ff] font-bold uppercase tracking-wider">
                   {currentTrack?.genre || 'RAP OFICIAL'}
                 </span>
                 {currentTrack?.duet && (
-                  <span className="text-[8px] bg-red-950/60 border border-red-700/40 text-red-300 px-1.5 py-0.2 rounded uppercase font-tech">
+                  <span className="text-[8px] bg-cyan-950/60 border border-cyan-700/40 text-cyan-300 px-1.5 py-0.2 rounded uppercase font-tech">
                     DUETO
                   </span>
                 )}
@@ -178,10 +178,10 @@ export default function AudioPlayer({
 
               <button
                 onClick={onTogglePlay}
-                className="w-10 h-10 rounded-full bg-[#ff0033] text-white flex items-center justify-center hover:bg-red-600 hover:scale-110 transition-all shadow-lg shadow-red-600/40"
+                className="w-10 h-10 rounded-full bg-[#00f0ff] text-black flex items-center justify-center hover:bg-cyan-400 hover:scale-110 transition-all shadow-lg shadow-cyan-500/40"
                 title={isPlaying ? 'Pausar Canción' : 'Reproducir Canción'}
               >
-                {isPlaying ? <Pause size={18} /> : <Play size={18} className="fill-white translate-x-0.5" />}
+                {isPlaying ? <Pause size={18} /> : <Play size={18} className="fill-current translate-x-0.5" />}
               </button>
 
               <button
@@ -211,7 +211,7 @@ export default function AudioPlayer({
             <div className="flex items-center gap-2">
               <button
                 onClick={handleToggleMute}
-                className="text-zinc-400 hover:text-[#ff0033] transition-colors"
+                className="text-zinc-400 hover:text-[#00f0ff] transition-colors"
                 title={isMuted ? 'Desmutear' : 'Mutear'}
               >
                 {isMuted ? <VolumeX size={17} /> : <Volume2 size={17} />}
@@ -223,7 +223,7 @@ export default function AudioPlayer({
                 step="0.05"
                 value={isMuted ? 0 : volume}
                 onChange={handleVolumeChange}
-                className="w-16 sm:w-20 accent-[#ff0033] bg-zinc-700 h-1.5 rounded-full cursor-pointer"
+                className="w-16 sm:w-20 accent-[#00f0ff] bg-zinc-700 h-1.5 rounded-full cursor-pointer"
               />
             </div>
 

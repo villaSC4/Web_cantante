@@ -35,12 +35,12 @@ export default function LightboxModal({ selectedImage, currentIndex, itemsList, 
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 sm:p-6 animate-fadeIn">
+    <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-5 sm:p-8 pt-6 sm:pt-8 animate-fadeIn">
       
       {/* Top Header Bar */}
-      <div className="flex items-center justify-between z-20">
+      <div className="flex items-center justify-between z-20 pb-2">
         <div className="flex items-center gap-3">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#ff0033]"></span>
+          <span className="w-2.5 h-2.5 rounded-full bg-[#00f0ff]"></span>
           <span className="font-tech text-xs font-bold text-zinc-300 uppercase tracking-widest">
             {currentIndex + 1} / {itemsList.length} • {selectedImage.category}
           </span>
@@ -49,7 +49,7 @@ export default function LightboxModal({ selectedImage, currentIndex, itemsList, 
         <div className="flex items-center gap-2">
           <button
             onClick={handleShare}
-            className="p-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-red-500 transition-colors"
+            className="p-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-white hover:border-cyan-500 transition-colors"
             title="Compartir"
           >
             <Share2 size={16} />
@@ -67,7 +67,7 @@ export default function LightboxModal({ selectedImage, currentIndex, itemsList, 
 
           <button
             onClick={onClose}
-            className="p-2.5 rounded-full bg-red-950/60 border border-red-700/60 text-white hover:bg-[#ff0033] transition-colors"
+            className="p-2.5 rounded-full bg-cyan-950/60 border border-cyan-700/60 text-white hover:bg-[#00f0ff] hover:text-black transition-colors"
             title="Cerrar (Esc)"
           >
             <X size={18} />
@@ -84,7 +84,7 @@ export default function LightboxModal({ selectedImage, currentIndex, itemsList, 
             e.stopPropagation();
             onNavigate(-1);
           }}
-          className="absolute left-2 sm:left-6 z-30 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-[#ff0033] border border-white/10 text-white transition-all transform hover:scale-110"
+          className="absolute left-2 sm:left-6 z-30 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-[#00f0ff] hover:text-black border border-white/10 text-white transition-all transform hover:scale-110"
           aria-label="Foto anterior"
         >
           <ChevronLeft size={24} />
@@ -105,7 +105,7 @@ export default function LightboxModal({ selectedImage, currentIndex, itemsList, 
             e.stopPropagation();
             onNavigate(1);
           }}
-          className="absolute right-2 sm:right-6 z-30 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-[#ff0033] border border-white/10 text-white transition-all transform hover:scale-110"
+          className="absolute right-2 sm:right-6 z-30 p-3 sm:p-4 rounded-full bg-black/60 hover:bg-[#00f0ff] hover:text-black border border-white/10 text-white transition-all transform hover:scale-110"
           aria-label="Siguiente foto"
         >
           <ChevronRight size={24} />

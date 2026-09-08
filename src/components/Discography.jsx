@@ -15,8 +15,8 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
 
   return (
     <section id="discography" className="py-24 relative overflow-hidden bg-[#050507]">
-      {/* Red accent glow */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-red-600/10 rounded-full blur-[160px] pointer-events-none"></div>
+      {/* Cyan accent glow */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-cyan-500/10 rounded-full blur-[160px] pointer-events-none"></div>
 
       <div className="container-custom relative z-10">
         
@@ -24,13 +24,13 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="w-8 h-[2px] bg-[#ff0033]"></span>
-              <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#ff0033]">
+              <span className="w-8 h-[2px] bg-[#00f0ff]"></span>
+              <span className="text-xs font-tech font-bold uppercase tracking-[0.3em] text-[#00f0ff]">
                 CATÁLOGO MUSICAL & COLABORACIONES
               </span>
             </div>
             <h2 className="font-heading text-5xl sm:text-6xl md:text-7xl text-white tracking-wide">
-              DISCOGRAFÍA & <span className="text-[#ff0033]">DUETOS</span>
+              DISCOGRAFÍA & <span className="text-[#00f0ff]">DUETOS</span>
             </h2>
             <p className="text-zinc-400 text-sm sm:text-base max-w-xl font-light mt-1">
               Explora sus producciones originales, duetos de alto nivel y sesiones de freestyle. Haz clic para reproducir los beats.
@@ -43,7 +43,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
               onClick={() => setFilter('ALL')}
               className={`px-4 py-1.5 rounded-full text-xs font-tech font-bold tracking-wider transition-all ${
                 filter === 'ALL'
-                  ? 'bg-[#ff0033] text-white shadow-md shadow-red-600/30'
+                  ? 'bg-[#00f0ff] text-black font-bold shadow-md shadow-cyan-500/30'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
@@ -53,7 +53,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
               onClick={() => setFilter('DUETS')}
               className={`px-4 py-1.5 rounded-full text-xs font-tech font-bold tracking-wider transition-all flex items-center gap-1.5 ${
                 filter === 'DUETS'
-                  ? 'bg-[#ff0033] text-white shadow-md shadow-red-600/30'
+                  ? 'bg-[#00f0ff] text-black font-bold shadow-md shadow-cyan-500/30'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
@@ -64,7 +64,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
               onClick={() => setFilter('SOLO')}
               className={`px-4 py-1.5 rounded-full text-xs font-tech font-bold tracking-wider transition-all ${
                 filter === 'SOLO'
-                  ? 'bg-[#ff0033] text-white shadow-md shadow-red-600/30'
+                  ? 'bg-[#00f0ff] text-black font-bold shadow-md shadow-cyan-500/30'
                   : 'text-zinc-400 hover:text-white'
               }`}
             >
@@ -87,13 +87,13 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                   key={track.id}
                   className={`p-4 rounded-2xl border transition-all duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4 group ${
                     isCurrent
-                      ? 'bg-red-950/30 border-red-500/80 shadow-lg shadow-red-600/20'
-                      : 'bg-zinc-900/50 border-zinc-800/80 hover:border-red-500/40 hover:bg-zinc-900/90'
+                      ? 'bg-cyan-950/30 border-cyan-500/80 shadow-lg shadow-cyan-500/20'
+                      : 'bg-zinc-900/50 border-zinc-800/80 hover:border-cyan-500/40 hover:bg-zinc-900/90'
                   }`}
                 >
                   {/* Left: Number + Cover + Track info */}
                   <div className="flex items-center gap-4">
-                    <span className="font-heading text-xl text-zinc-500 w-6 text-center group-hover:text-[#ff0033] transition-colors">
+                    <span className="font-heading text-xl text-zinc-500 w-6 text-center group-hover:text-[#00f0ff] transition-colors">
                       {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                     </span>
 
@@ -119,7 +119,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                         aria-label="Reproducir track"
                       >
                         {isThisPlaying ? (
-                          <Pause size={18} className="text-[#ff0033]" />
+                          <Pause size={18} className="text-[#00f0ff]" />
                         ) : (
                           <Play size={18} className="fill-white translate-x-0.5" />
                         )}
@@ -129,11 +129,11 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                     {/* Track info */}
                     <div className="space-y-1">
                       <div className="flex items-center gap-2">
-                        <h4 className="font-heading text-lg sm:text-xl text-white tracking-wide group-hover:text-red-400 transition-colors">
+                        <h4 className="font-heading text-lg sm:text-xl text-white tracking-wide group-hover:text-cyan-400 transition-colors">
                           {track.title}
                         </h4>
                         {track.duet && (
-                          <span className="px-2 py-0.5 rounded-full bg-red-600/20 border border-red-500/40 text-[9px] font-tech text-red-300 font-bold uppercase tracking-wider">
+                          <span className="px-2 py-0.5 rounded-full bg-cyan-600/20 border border-cyan-500/40 text-[9px] font-tech text-cyan-300 font-bold uppercase tracking-wider">
                             DUETO
                           </span>
                         )}
@@ -157,7 +157,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                     {/* View Lyrics */}
                     <button
                       onClick={() => setSelectedLyricsTrack(track)}
-                      className="p-2 rounded-lg bg-zinc-800/60 hover:bg-red-950/60 border border-zinc-700/60 hover:border-red-500/60 text-zinc-300 hover:text-[#ff0033] transition-colors"
+                      className="p-2 rounded-lg bg-zinc-800/60 hover:bg-cyan-950/60 border border-zinc-700/60 hover:border-cyan-500/60 text-zinc-300 hover:text-[#00f0ff] transition-colors"
                       title="Ver Letra / Barras"
                     >
                       <FileText size={15} />
@@ -174,8 +174,8 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                       }}
                       className={`px-4 py-2 rounded-full font-tech text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 transition-all ${
                         isThisPlaying
-                          ? 'bg-[#ff0033] text-white shadow-lg shadow-red-600/40'
-                          : 'bg-zinc-800 text-zinc-200 hover:bg-[#ff0033] hover:text-white'
+                          ? 'bg-[#00f0ff] text-black shadow-lg shadow-cyan-500/40'
+                          : 'bg-zinc-800 text-zinc-200 hover:bg-[#00f0ff] hover:text-black'
                       }`}
                     >
                       {isThisPlaying ? <Pause size={14} /> : <Play size={14} className="fill-current" />}
@@ -189,15 +189,15 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
 
           {/* Right: Featured Duets Spotlight Card (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
-            <div className="glass-card-red p-6 rounded-3xl space-y-4 relative overflow-hidden">
+            <div className="glass-card-cyan p-6 rounded-3xl space-y-4 relative overflow-hidden">
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#ff0033] animate-ping"></span>
-                <span className="text-xs font-tech font-bold uppercase tracking-widest text-[#ff0033]">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#00f0ff] animate-ping"></span>
+                <span className="text-xs font-tech font-bold uppercase tracking-widest text-[#00f0ff]">
                   ESPECIAL DUETOS
                 </span>
               </div>
 
-              <div className="relative rounded-2xl overflow-hidden border border-red-500/40 aspect-video">
+              <div className="relative rounded-2xl overflow-hidden border border-cyan-500/40 aspect-video">
                 <img
                   src="/assets/IMG_1829.jpg"
                   alt="COREBACK Duets Live"
@@ -235,7 +235,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                     href="https://youtube.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-red-500 hover:border-red-500 transition-colors"
+                    className="p-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-300 hover:text-[#00f0ff] hover:border-cyan-500 transition-colors"
                     title="YouTube"
                   >
                     <Radio size={15} />
@@ -251,11 +251,11 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
         {/* Lyrics Modal if Selected */}
         {selectedLyricsTrack && (
           <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
-            <div className="bg-[#0e0e12] border border-red-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative animate-scaleUp">
+            <div className="bg-[#0e0e12] border border-cyan-500/50 rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-6 shadow-2xl relative animate-scaleUp">
               
               <div className="flex items-start justify-between border-b border-white/10 pb-4">
                 <div>
-                  <span className="text-[10px] font-tech text-[#ff0033] font-bold uppercase tracking-wider">
+                  <span className="text-[10px] font-tech text-[#00f0ff] font-bold uppercase tracking-wider">
                     LETRA & BARRAS
                   </span>
                   <h3 className="font-heading text-2xl text-white">
@@ -287,7 +287,7 @@ export default function Discography({ currentTrack, isPlaying, onSelectTrack, on
                   }}
                   className="btn-primary py-2 px-5 text-xs"
                 >
-                  <Play size={14} className="fill-white" />
+                  <Play size={14} className="fill-current" />
                   <span>REPRODUCIR TRACK</span>
                 </button>
                 <button
